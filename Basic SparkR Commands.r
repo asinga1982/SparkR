@@ -49,3 +49,11 @@ arrange("Sepal_Length", "Petal_Width") %>%
 select(df$Species, df$Petal_Width, df$Sepal_Length)
 
 head(df1,10)
+
+# Register a Temp table and Query like SQL
+registerTempTable(df,"df")
+
+#Select Dat from DF
+dfSQL<-sql("SELECT * FROM df WHERE Sepal_Length > 5.5 and ")
+
+head(dfSQL)

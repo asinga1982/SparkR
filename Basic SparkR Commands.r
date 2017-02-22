@@ -36,7 +36,6 @@ dim(x)
 head(summarize(groupBy(df, df$Species),mean(df$Sepal_Length), count=n(df$Species), max(df$Sepal_Length), min(df$Sepal_Length)  ) )
 
 head(distinct(select(df,df$Species )))
-
 # COMMAND ----------
 
 #Sorting Data

@@ -1,0 +1,12 @@
+Sys.setenv(SPARK_HOME="E:\\spark-2.0.2-bin-hadoop2.7\\spark-2.0.2-bin-hadoop2.7")
+.libPaths(c(file.path(Sys.getenv("SPARK_HOME"), "R", "lib"), .libPaths()))
+ 
+library(SparkR, lib.loc=c(file.path(Sys.getenv("SPARK_HOME"),"R", "lib")))
+
+sparkR.session(master = "local[*]", enableHiveSupport = FALSE, sparkConfig =
+list(spark.driver.memory = "2g",
+spark.sql.warehouse.dir="E:\\spark-2.0.2-bin-hadoop2.7\\spark-2.0.2-bin-hadoop2.7"))
+
+
+sparkR.session.stop()
+

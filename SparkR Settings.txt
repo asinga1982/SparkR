@@ -7,6 +7,6 @@ sparkR.session(master = "local[*]", enableHiveSupport = FALSE, sparkConfig =
 list(spark.driver.memory = "2g",
 spark.sql.warehouse.dir="E:\\spark-2.0.2-bin-hadoop2.7\\spark-2.0.2-bin-hadoop2.7"))
 
-
+#In the End
 sparkR.session.stop()
 
